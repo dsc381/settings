@@ -1,0 +1,21 @@
+:set guifont=DejaVu\ Sans\ Mono\ 7
+:colorscheme molokai
+:set tabstop=2
+:set shiftwidth=2
+:set expandtab
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+
+setlocal foldmethod=expr
+setlocal foldexpr=(getline(v:lnum)=~'^$')?-1:((indent(v:lnum)<indent(v:lnum+1))?('>'.indent(v:lnum+1)):indent(v:lnum))
+set foldtext=getline(v:foldstart)
+set fillchars=fold:\ 
+
+set foldlevelstart=999
+
+
+nnoremap <space> za
+vnoremap <space> zf
