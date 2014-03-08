@@ -3,7 +3,6 @@
 :set shiftwidth=2
 :set expandtab
 :set cursorline
-:set nnoremap E $
 
 "start the named mark prototype
 let s:NamedMark = {}
