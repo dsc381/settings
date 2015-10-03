@@ -154,6 +154,7 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (global-linum-mode)
   (setq powerline-default-separator 'alternate)
   (setq flycheck-check-syntax-automatically '(mode-enabled save))
   
